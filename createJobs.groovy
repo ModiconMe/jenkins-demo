@@ -6,3 +6,17 @@ pipelineJob('pipelineJob') {
         }
     }
 }
+pipelineJob('real-world-app-job') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url 'https://github.com/ModiconMe/real-world-app.git'
+                    }
+                    branch 'main'
+                }
+            }
+        }
+    }
+}
